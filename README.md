@@ -7,3 +7,5 @@
 - Work: 25-minute focus sessions
 - Short Break: 5-minute breaks
 - Long Break: 15-minute breaks after 4 work sessions
+
+https://pomodoro-timer-pearl.vercel.app/
