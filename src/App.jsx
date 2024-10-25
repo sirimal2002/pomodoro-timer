@@ -15,7 +15,9 @@ function App() {
       interval = setInterval(() => {
         if (seconds === 0) {
           if (minutes === 0) {
-            const audio = new Audio("../src/assets/bugle_tune.wav");
+            const audio = new Audio(
+              ".https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg"
+            );
             audio.play();
 
             // Handle cycle completion
