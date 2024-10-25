@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Timer, Play, Pause, RotateCcw, CircleX } from "lucide-react";
 
 function App() {
-  const [minutes, setMinutes] = useState(2);
+  const [minutes, setMinutes] = useState(25);
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
   const [mode, setMode] = useState("work"); // work, shortBreak, longBreak
