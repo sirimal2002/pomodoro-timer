@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Timer, Play, Pause, RotateCcw } from "lucide-react";
+import { Timer, Play, Pause, RotateCcw, CircleX } from "lucide-react";
 
 function App() {
-  const [minutes, setMinutes] = useState(25);
+  const [minutes, setMinutes] = useState(2);
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
   const [mode, setMode] = useState("work"); // work, shortBreak, longBreak
@@ -74,6 +74,11 @@ function App() {
     }
   };
 
+  const reload = () => {
+    setCycles(0);
+    resetTimer();
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-r from-cyan-900  to-violet-800 flex items-center justify-center p-4">
       <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 w-full max-w-md shadow-2xl">
@@ -143,8 +148,13 @@ function App() {
             <RotateCcw onClick={resetTimer} className="w-6 h-6" />
           </button>
         </div>
-        <div className="mt-8 text-center text-white/80">
-          Completed Cycles: {cycles}
+        <div className="flex justify-center space-x-4 mt-8">
+          <div className="text-center text-white/80">
+            Completed Cycles: {cycles}
+          </div>
+          <button className="text-white/50 transition-all duration-300">
+            <CircleX onClick={reload} className="w-4 h-4" />
+          </button>
         </div>
       </div>
     </div>
